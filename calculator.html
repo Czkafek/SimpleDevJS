@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+    </head>
+    <body>
+        <button onclick="addChar(1);">1</button>
+        <button onclick="addChar(2);">2</button>
+        <button onclick="addChar(3);">3</button>
+        <button onclick="addChar(4);">4</button>
+        <button onclick="addChar(5);">5</button>
+        <button onclick="addChar('+');">+</button>
+        <button onclick="addChar('-');">-</button>
+        <button onclick="addChar('*');">*</button>
+        <button onclick="addChar('/');">/</button>
+        <button onclick="sum();";>=</button>
+        <button onclick="reset();">reset</button>
+
+        <script>
+            let calculation = localStorage.getItem('result') || '';
+            
+            function addChar(character) {
+                if(calculation == 0) {
+                    calculation = character;
+                }
+                else {
+                    calculation += character;
+                }
+                console.log(calculation);
+            }
+
+            function sum() {
+                calculation = eval(calculation);
+                console.log(calculation)
+                localStorage.setItem('result', calculation);
+            }
+
+            function reset() {
+                calculation = '0';
+                localStorage.setItem('result', calculation);
+            }
+
+        </script>
+    </body>
+</html>
