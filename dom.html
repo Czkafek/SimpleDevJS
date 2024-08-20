@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <button>button</button>
+    <button class="Button">Second button</button>
+
+    <script>
+        //document.body.innerHTML = '<button class="Button">DOM - Document Object Model</button>';
+        document.title = 'DOM - Document Object Model';
+        console.log(document.body);
+
+        let buttonElement1 = document.querySelector('button');
+        const buttonElement2 = document.querySelector('.Button');
+        console.log(buttonElement1);
+        buttonElement1.style.backgroundColor = 'red';
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <p>Youtube Subscribe Button</p>
+    <button onclick="sub(this)">Subscribe</button>
+
+    <script>
+        function sub(element) {
+            if(element.innerText === "Subscribe") {
+                element.innerText = "Subscribed";
+            }
+            else {
+                element.innerText = "Subscribe";
+            }
+        }
+        
+
+    </script>
+</body>
+</html>
