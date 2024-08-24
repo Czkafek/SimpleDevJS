@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .add {
+            border: none;
+            background-color: rgb(224, 48, 48);
+            color: #FCFCF7;
+            padding: 0.5rem 1rem 0.5rem 1rem;
+            border-radius: 100px;
+            transition: opacity 0.15s;
+        }
+        .add:hover {
+            opacity: 0.8;
+        }
+        .add:active {
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <button class="start">Start</button> <br><br>
+    <button class="add">Add to cart</button>
+    <p class="addedParagraph"></p>
+    <button onclick="i++">Add</button>
+    <button onclick="if(i>0) {i--}">Remove</button>
+    
+    <script>
+        const add = function() {
+            console.log(2+3);
+        };
+        add();
+
+        function runTwice(par) {
+            par();
+            par();
+        }
+
+
+        const buttonElement1 = document.body.querySelector('.start');
+        
+        buttonElement1.addEventListener('click', () => {
+            buttonElement1.innerText = "Loading...";
+            setTimeout(() => changeText(buttonElement1), 1000);
+        });
+
+
+        function changeText(element) {
+            element.innerText = "Finished!";
+        }
+
+
+        const buttonElement2 = document.body.querySelector('.add');
+
+        buttonElement2.addEventListener('click', () => {
+            let addedParagraph = document.body.getElementsByClassName("addedParagraph");
+            addedParagraph[0].innerText = "Added";
+
+            if(timeout) {
+                clearTimeout(timeout);
+            }
+
+            timeout = setTimeout(function() {
+                addedParagraph[0].innerText = "";
+            }, 2000);
+        });
+
+
+        let timeout;
+
+        function added() {
+            let addedParagraph = document.body.getElementsByClassName("addedParagraph");
+            addedParagraph[0].innerText = "Added";
+
+            if(timeout) {
+                clearTimeout(timeout);
+            }
+
+            timeout = setTimeout(function() {
+                addedParagraph[0].innerText = "";
+            }, 2000);
+        }
+
+        let i=0;
+       setInterval(function() {
+            if(i === 0) {document.title = "App";}
+            else {document.title = `(${i}) New messages`};},
+            1000
+        )
+
+    </script>
+</body>
+</html>
