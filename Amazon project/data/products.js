@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/products/athletic-cotton-socks-6-pairs.jpg",
@@ -645,6 +645,38 @@ const products = [
     id: "bc2847e9-5323-403f-b7cf-57fde044a955",
     image: "images/products/men-cozy-fleece-zip-up-hoodie-red.jpg",
     name: "Men's Full-Zip Hooded Fleece Sweatshirt",
+    rating: {
+      stars: 45,
+      count: 3157
+    },
+    priceCents: 2400,
+    keywords: [
+      "sweaters",
+      "hoodies",
+      "apparel",
+      "mens"
+    ]
+  },
+  {
+    id: "1234",
+    image: "images/products/backpack.jpg",
+    name: "Backpack bi*ch",
+    rating: {
+      stars: 45,
+      count: 3157
+    },
+    priceCents: 2400,
+    keywords: [
+      "sweaters",
+      "hoodies",
+      "apparel",
+      "mens"
+    ]
+  },
+  {
+    id: "4321",
+    image: "images/products/umbrella.jpg",
+    name: "Umbrella bi*tch",
     rating: {
       stars: 45,
       count: 3157
